@@ -1,0 +1,386 @@
+@font-face {
+    font-family: 'yekan';
+    src: url('../fonts/YekanBakh-Medium.eot');
+    src: url('../fonts/YekanBakh-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/YekanBakh-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'yekan';
+    src: url('../fonts/YekanBakh-Bold.eot');
+    src: url('../fonts/YekanBakh-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/YekanBakh-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'yekan';
+    src: url('../fonts/YekanBakh-Light.eot');
+    src: url('../fonts/YekanBakh-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/YekanBakh-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {}
+
+body {
+
+    min-height: 100vh;
+    background-color: #0d161f;
+    color: #fff;
+}
+
+body * {
+    font-family: 'yekan';
+    font-size: 105%;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.button.green ,
+.button.instagram,
+.button.whatsapp {
+    background: #cbff00;
+    color: #0d161f;
+    font-weight: 500;
+    border-radius: 12px;
+}
+
+.button.instagram {
+    background: #833ab4;
+    background: linear-gradient(
+      to right,
+      #833ab4,#fd1d1d,#fcb045
+    );
+    background-size: 120%;
+    background-position: -10px 0;
+}
+.button.whatsapp {
+    background-color: #25D366;
+}
+
+.button.has_icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button.has_icon svg {
+    width: 50px;
+    height: 25px;
+    margin-left: 25px;
+    fill: #0d161f;
+    border-left: 1px solid #263d55;
+}
+
+.button.has_icon .text {
+    min-width: 160px;
+    text-align: right;
+}
+
+/*
+------------------------------------------------------------
+01-Index
+------------------------------------------------------------
+*/
+.intro_box {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+    justify-content: flex-end;
+}
+.intro_box.center {
+    justify-content: center;
+}
+.intro_box .content {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px 20px 20px;
+}
+
+.intro_box .content:before {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 75px);
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+
+}
+
+.intro_box .logo {
+    display: inline-flex;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    overflow: hidden;
+    margin: 0 0 40px 0;
+    box-shadow: 0 0 0 15px #55667b;
+    z-index: 1;
+}
+
+/*
+------------------------------------------------------------
+02-index
+------------------------------------------------------------
+*/
+.survey_box .page_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 0 0 0;
+    margin: 0 0 15px 0;
+}
+
+.survey_box .page_title .title {
+    font-weight: bold;
+    font-size: 20pt;
+    color: #cbff00;
+}
+
+.survey_box .page_title .back {
+    display: flex;
+    align-items: center;
+    color: rgb(179, 0, 0);
+}
+
+.survey_box .page_title .back svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+ul.survey_list {
+    margin: 0 0 30px 0;
+}
+
+ul.survey_list .item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 15px 10px;
+    margin: 0 0 15px 0;
+}
+
+.survey_list .item>.title {
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.survey_list .item .rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.survey_list .item .rating>button {
+    cursor: pointer;
+    font-size: 12pt;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.survey_list .item .rating>button>svg {
+    width: 55px;
+    height: 55px;
+    fill: #798593;
+    margin: 0 0 8px 0;
+}
+
+.survey_list .item .rating>button>span {
+    padding: 5px 0;
+    display: block;
+}
+
+.survey_list .item .rating>button[data-rate="4"].clicked>svg,
+.survey_list .item .rating>button[data-rate="4"].clicked {
+    color: #0ab64c;
+    fill: #0ab64c;
+}
+
+.survey_list .item .rating>button[data-rate="3"].clicked>svg,
+.survey_list .item .rating>button[data-rate="3"].clicked {
+    color: #c7e426;
+    fill: #c7e426;
+}
+
+.survey_list .item .rating>button[data-rate="2"].clicked>svg,
+.survey_list .item .rating>button[data-rate="2"].clicked {
+    color: #e49826;
+    fill: #e49826;
+}
+
+.survey_list .item .rating>button[data-rate="1"].clicked>svg,
+.survey_list .item .rating>button[data-rate="1"].clicked {
+    color: #d1440d;
+    fill: #d1440d;
+}
+.form_button_container {
+    padding: 30px 15%;
+}
+/*
+------------------------------------------------------------
+popup
+------------------------------------------------------------
+*/
+
+.custom_popup {
+    background-color: #0d161f;
+}
+
+.custom_popup button.close-button {
+    right: auto;
+    left: 20px;
+    top: 25px;
+}
+
+.custom_popup button.close-button svg {
+    width: 40px;
+    height: 40px;
+    fill: #687e95;
+}
+
+.custom_popup .modal_title {
+    font-size: 20pt;
+    font-weight: bold;
+    padding: 15px 0;
+    margin: 0 0 20px 0;
+}
+
+.custom_popup .survey_list {
+    margin-bottom: 30px;
+}
+
+.custom_popup .modal_button_container {
+    padding: 0 15%;
+}
+
+/*
+------------------------------------------------------------
+checkboxs group
+------------------------------------------------------------
+*/
+.checkbox_group {
+    margin-bottom: 30px;
+}
+
+.control {
+    display: block;
+    position: relative;
+    padding: 7px 5px;
+    padding-right: 45px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.control input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.element_indicator {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    margin: auto;
+    height: 25px;
+    width: 25px;
+    background: #e6e6e6;
+    border-radius: 4px;
+}
+
+.control--radio .element_indicator {
+    border-radius: 50%;
+}
+
+.control:hover input~.element_indicator,
+.control input:focus~.element_indicator {
+    background: #ccc;
+}
+
+.control input:checked~.element_indicator {
+    background: #cbff00;
+}
+
+.control:hover input:not([disabled]):checked~.element_indicator,
+.control input:checked:focus~.element_indicator {
+    background: #cbff00;
+}
+
+.control input:disabled~.element_indicator {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.element_indicator:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.control input:checked~.element_indicator:after {
+    display: block;
+}
+
+.checkbox_element .element_indicator:after {
+    right: 8px;
+    top: 1px;
+    width: 10px;
+    height: 20px;
+    transform: rotate(45deg);
+    border-right: 4px solid #000;
+    border-bottom: 4px solid #000;
+}
+
+.checkbox_element input:disabled~.element_indicator:after {
+    border-color: #7b7b7b;
+}
+
+.control--radio .element_indicator:after {
+    left: 7px;
+    top: 7px;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.control--radio input:disabled~.element_indicator:after {
+    background: #7b7b7b;
+}
+
+
+.textarea,
+.textarea:focus {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 12px;
+    resize: none;
+    border: 1px solid rgba(255, 255, 255, 0.15)
+}
